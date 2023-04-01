@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ninjas!!</title>
+        
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+  
+        <section id="seleccionar-ninja">
+            <h1 class="titulo" >Ninjas!⚽ 🪀🌱 </h1>
+
+            <h2 class="subtitulo">Elije a tu ninja</h2>
+
+            <div id="contenedorTarjetas" class="Tarjetas">
+               
+            </div>
+
+            <button id="boton-ninja">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo" >Recorre el mapa con tu    
+            ninja</h2>
+            <canvas id="mapa"></canvas>
+            <button
+               
+                ontouchend="detenerMovimiento()"
+                onmouseup="detenerMovimiento()"
+                onmousedown="moverArriba()"
+                ontouchstart="moverArriba()"
+            >arriba</button>
+
+            <div>               
+                <button
+                    onmouseup="detenerMovimiento()"
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverIzquierda()"
+                    ontouchstart="moverIzquierda()"
+                >izquierda</button>
+
+                <button 
+                    onmouseup="detenerMovimiento()"
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverAbajo()"
+                    ontouchstart="moverAbajo()"
+                >abajo</button>
+
+                <button 
+                    onmouseup="detenerMovimiento()"
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverDerecha()"
+                    ontouchstart="moverDerecha()"
+                >derecha</button>
+
+            </div>
+            
+        </section>
+
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo" >Ninjas!⚽ 🪀🌱 </h1>
+
+            <h2 class="subtitulo">Elije tu ataque</h2>
+
+            <div id="contenedorAtaques" class="tarjeta-ataques">
+               
+            </div>
+          
+            <div id="mensajes">
+                <p id="resultado">Vamos a Jugar</p>
+
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Reiniciar</button>
+                </section>
+            </div> 
+            
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">0</p>
+                    <p id="ninja-jugador"></p>
+                    <div id="ataques-Del-Jugador"></div>
+                   
+                </div>
+
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">0</p>
+                    <p id="ninja-enemigo"></p>
+                    <div id="ataques-Del-enemigo"></div>
+                </div> 
+            </div>
+        </section>
+        <script src="./mokepon.js"></script>
+    </body>
+</html>
